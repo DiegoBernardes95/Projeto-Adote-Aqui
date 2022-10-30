@@ -24,4 +24,4 @@
 <img src="https://user-images.githubusercontent.com/113109526/198883783-f421c5c4-966a-493c-8862-298ec3b1c124.jpg">
 
 
-<p>📌 Para acessar a página do projeto no GitHub Pages, <a href="https://diegobernardes95.github.io/adote-aqui/">clique aqui</a>.</p>
+<p>📌 Para acessar a página do projeto no GitHub Pages, <a href="https://diegobernardes95.github.io/Projeto-Adote-Aqui/">clique aqui</a>.</p>
