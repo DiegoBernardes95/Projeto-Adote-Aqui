@@ -1,28 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
     background-image: url(../imagens/background-image.jpg);
+    background-size: auto;
+    overflow-x: hidden;
 }
 .container{
-    background: tomato;
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    border: 1px solid white;
-    border-radius: 40px;
-    max-width: 100%;
+    background-color: greenyellow;
     overflow: hidden;
 }
-.container h3{
-    margin-left: 5px;
+#logo{
+    display: flex;
+    justify-content: center;
+    flex: 60%;
+    font-family: 'Indie Flower', cursive;
 }
 .menu{
     display: flex;
-    background: orange;
+    flex: 40%;
+    transition: all 0.5s;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
 }
-a{
+.menu ul{
+    display: flex;
+    margin-right: 10px;
+}
+.menu li{
     padding: 20px;
-    font-family: Verdana;
-    font-weight: bold;
     color: black;
+    list-style: none;
+}
+.menu li a{
     text-decoration: none;
- 
+    color: black;
+}
+.menu li a:hover, .contato a:hover{
+    color: bisque;
+    text-shadow: 1px 1px black;
+}
+.buttonBurguer{
+    position: absolute;
+    right: 10px;
+    display: none;
+    margin-top: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.buttonBurguer .line{
+    display: block;
+    width: 32px;
+    height: 2px;
+    margin: 8px;
+    background-color: black;
+    border-radius: 10px;
+    transition: all 0.4s ease-in-out;
+}
+@media (max-width: 700px){
+    .container, .menu ul{
+        flex-direction: column;
+        align-items: unset;
+    }
+    .menu{
+        flex: none;
+        height: 0;
+        text-align: center;
+    }
+    .menu li:hover{
+        background-color: green;
+        color: #fff;
+    }
+    .menu ul{
+        margin-right: 35px;
+        width: 100%;
+    }
+    .menu.open{
+        height: 230px;
+        width: 100%;
+        text-align: center;
+    }
+    .buttonBurguer{
+        display: block;
+    }
+    .buttonBurguer.active .line:nth-child(2){
+        opacity: 0;
+    }
+    .buttonBurguer.active .line:nth-child(1){
+        transform: translateY(10px) rotate(-45deg);
+    }
+    .buttonBurguer.active .line:nth-child(3){
+        transform: translateY(-10px) rotate(45deg);
+    }
+}
+.frase{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 25px;
+    text-shadow: 2px 2px #fff;
+    background-color: rgba(255, 228, 196, 0.856);
+}
+.frase p{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+main{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.banner{
+    display: flex;
+    width: 100vw;
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+.banner img{
+    flex: 45%;
+    width: 400px;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.textBanner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 55%;
+    background-color: rgba(172, 255, 47, 0.582);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+.textBanner h2{
+    text-shadow: 2px 2px #fff;
+    font-family: 'Indie Flower', cursive;
+}
+.textBanner p{
+    margin-left: 35px;
+    margin-right: 35px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.textBanner a{
+    text-decoration: none;
+    color: salmon;
+}
+.textBanner a:hover{
+    text-shadow: 1px 1px black;
+}
+@media(max-width: 1000px){
+    .banner{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .banner img{
+        width: 90%;
+        margin-bottom: 30px;
+        border-radius: 20px;
+    }
+    .textBanner{
+        border-radius: 20px;
+    }
+    .banner2{
+        flex-direction: column;
+        align-items: center;
+    }
+    .textoBanner2{
+        width: 70%;
+    }
+    .textoBanner2 p{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+.banner2{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    background-color: rgba(255, 228, 196, 0.856);
+}
+.textoBanner2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex: 33%;
+    margin-bottom: 30px;
+}
+.textoBanner2 h3{
+    text-shadow: 2px 2px #fff;
+    font-family: 'Indie Flower', cursive;
+}
+.textoBanner2 p{
+    margin-left: 60px;
+    margin-right: 60px;
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+footer{
+    width: 100vw;
+    background-color: greenyellow;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo img{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.contato{
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.contato a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    margin: 7px;
+}
+.redesSociais{
+    display: flex;
+    color: black;
+}
+.redesSociais img{
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    cursor: pointer;
+}
+@media(max-width: 700px){
+    footer{
+        flex-direction: column;
+    }
+    .logo, .redesSociais{
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
