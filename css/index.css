@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap');
 body{
     margin: 0;
     padding: 0;
@@ -12,21 +14,23 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: greenyellow;
+    background-color: rgb(140, 209, 37);
     overflow: hidden;
 }
 #logo{
     display: flex;
     justify-content: center;
     flex: 60%;
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Righteous', cursive;
+    color: #fff;
+    text-shadow: 2px 2px black;
 }
 .menu{
     display: flex;
     flex: 40%;
     transition: all 0.5s;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
+    font-family: 'IM Fell English SC', serif;
+    font-size: 18px;
 }
 .menu ul{
     display: flex;
@@ -34,12 +38,12 @@ body{
 }
 .menu li{
     padding: 20px;
-    color: black;
     list-style: none;
 }
 .menu li a{
     text-decoration: none;
-    color: black;
+    color: #fff;
+    text-shadow: 1px 1px black; 
 }
 .menu li a:hover, .contato a:hover{
     color: bisque;
@@ -49,7 +53,7 @@ body{
     position: absolute;
     right: 10px;
     display: none;
-    margin-top: 15px;
+    margin-top: 23px;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -73,15 +77,14 @@ body{
         text-align: center;
     }
     .menu li:hover{
-        background-color: green;
-        color: #fff;
+        background-color: rgba(0, 128, 0, 0.616);
     }
     .menu ul{
         margin-right: 35px;
         width: 100%;
     }
     .menu.open{
-        height: 230px;
+        height: 215px;
         width: 100%;
         text-align: center;
     }
@@ -103,8 +106,9 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     text-shadow: 2px 2px #fff;
+    font-family: 'Tenor Sans', sans-serif;
     background-color: rgba(255, 228, 196, 0.856);
 }
 .frase p{
@@ -139,15 +143,16 @@ main{
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
 }
-.textBanner h2{
-    text-shadow: 2px 2px #fff;
-    font-family: 'Indie Flower', cursive;
+.textBanner h2, .textoBanner2 h2{
+    text-shadow: 2px 1px black;
+    color: #fff;
+    font-family: 'Righteous', cursive;
 }
 .textBanner p{
     margin-left: 35px;
     margin-right: 35px;
     font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Tenor Sans', sans-serif;
 }
 .textBanner a{
     text-decoration: none;
@@ -164,7 +169,7 @@ main{
     }
     .banner img{
         width: 90%;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
         border-radius: 20px;
     }
     .textBanner{
@@ -195,20 +200,16 @@ main{
     flex: 33%;
     margin-bottom: 30px;
 }
-.textoBanner2 h3{
-    text-shadow: 2px 2px #fff;
-    font-family: 'Indie Flower', cursive;
-}
 .textoBanner2 p{
     margin-left: 60px;
     margin-right: 60px;
     font-size: 16px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Tenor Sans', sans-serif;
 }
 
 footer{
     width: 100vw;
-    background-color: greenyellow;
+    background-color: rgb(140, 209, 37);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -223,14 +224,16 @@ footer{
 .contato{
     display: flex;
     flex-direction: column;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-
+    font-family: 'IM Fell English SC', serif;
 }
 .contato a{
     text-decoration: none;
-    color: black;
+    color: #fff;
+    text-shadow: 1px 1px black;
     font-size: 16px;
     margin: 7px;
+    text-align: center;
+    font-size: 18px;
 }
 .redesSociais{
     display: flex;
@@ -242,12 +245,19 @@ footer{
     padding: 10px;
     cursor: pointer;
 }
+.redesSociais img:hover{
+    box-shadow: 0 2px bisque;
+}
 @media(max-width: 700px){
     footer{
         flex-direction: column;
     }
-    .logo, .redesSociais{
-        margin-top: 30px;
-        margin-bottom: 30px;
+    .logo{
+        margin-top: 5px;
+        margin-bottom: 40px;
+    }
+    .redesSociais{
+        margin-top: 50px;
+        margin-bottom: 20px;
     }
 }
